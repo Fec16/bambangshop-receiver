@@ -96,3 +96,17 @@ This is the place for you to write reflections:
     - *In Java, mutating the value of a static variable through a static function is allowed because Java does not have the same level of strictness and guaranteed safety as Rust. Java's memory model and concurrency primitives differ, and Java relies more on explicit synchronization mechanisms such as synchronized blocks or volatile variables to ensure thread safety. Rust, on the other hand, leverages its borrowing system and concurrency primitives such as Mutex and RwLock to provide safe and efficient concurrency without compromising memory safety.* 
 
 #### Reflection Subscriber-2
+1. Have you explored things outside of the steps in the tutorial, for example: src/lib.rs? If not, explain why you did not do so. If yes, explain things that you have learned from those other parts of code.
+
+    *Explored additional elements outside the tutorial steps:*
+    - *Understanding and implementing lazy_static for deferred global variable initialization, enabling efficient resource utilization and optimization of memory usage.*
+    - *Configuring application settings via .env files, facilitating easy management of environment-specific configurations and enhancing application flexibility.*
+    - *Additionally, examined the integration of external crates or libraries to extend application capabilities, such as serde for serialization and deserialization tasks, further enhancing the application's functionality and interoperability.*
+
+2. Since you have completed the tutorial by now and have tried to test your notification system by spawning multiple instances of Receiver, explain how Observer pattern eases you to plug in more subscribers. How about spawning more than one instance of Main app, will it still be easy enough to add to the system?
+
+    *In implementing the Observer pattern for the notification system, the ease of adding new subscribers was noted. By maintaining a list of observers, new subscribers could be seamlessly incorporated without necessitating fundamental changes to the application's structure. However, when attempting to spawn more than one instance of the main application, it was observed that each instance has its own Observer pattern. Thus, if sharing notifications among instances is desired, a mechanism for shared data storage accessible by all instances needs to be provided.*
+
+3. Have you tried to make your own Tests, or enhance documentation on your Postman collection? If you have tried those features, tell us whether it is useful for your work (it can be your tutorial work or your Group Project).
+
+    *Regarding tests and Postman collection documentation, creating their own tests or enhancing the Postman collection documentation hasn't been attempted yet. However, these features are believed to be highly beneficial for the group project in the future.*
